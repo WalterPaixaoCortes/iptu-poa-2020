@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Walter R Paixão-Côrtes, Paulo A. Caliendo">
+
+  <title>IPTU 2020 em Porto Alegre</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/landing-page.min.css" rel="stylesheet">
+
+  <script>
+      var dados = [{"id":"1", "name":"Aberta dos Morros", "aumento":"0.1"},
+{"id":"2", "name":"Agronomia", "aumento":"0.5"},
+{"id":"3", "name":"Alto Petrópolis", "aumento":"0.5"},
+{"id":"4", "name":"Anchieta", "aumento":"0.25"},
+{"id":"5", "name":"Arquipélago", "aumento":"-0.05"},
+{"id":"6", "name":"Auxiliadora", "aumento":"0.25"},
+{"id":"7", "name":"Azenha", "aumento":"0.25"},
+{"id":"8", "name":"Bela Vista", "aumento":"0.5"},
+{"id":"9", "name":"Belém Novo", "aumento":"-0.05"},
+{"id":"10", "name":"Belém Velho", "aumento":"-0.05"},
+{"id":"11", "name":"Boa Vista", "aumento":"0.5"},
+{"id":"12", "name":"Boa Vista do Sul", "aumento":"0.1"},
+{"id":"13", "name":"Bom Fim", "aumento":"0.25"},
+{"id":"14", "name":"Bom Jesus", "aumento":"0.5"},
+{"id":"15", "name":"Camaquã", "aumento":"0.5"},
+{"id":"16", "name":"Campo Novo", "aumento":"0.25"},
+{"id":"17", "name":"Cascata", "aumento":"-0.05"},
+{"id":"18", "name":"Cavalhada", "aumento":"0.5"},
+{"id":"19", "name":"Cel. Aparício Borges", "aumento":"0.25"},
+{"id":"20", "name":"Centro Histórico", "aumento":"0.25"},
+{"id":"21", "name":"Chácara das Pedras", "aumento":"0.5"},
+{"id":"22", "name":"Chapéu do Sol", "aumento":"-0.05"},
+{"id":"23", "name":"Cidade Baixa", "aumento":"-0.05"},
+{"id":"24", "name":"Costa e Silva", "aumento":"0.1"},
+{"id":"25", "name":"Cristal", "aumento":"0.5"},
+{"id":"26", "name":"Cristo Redentor", "aumento":"0.5"},
+{"id":"27", "name":"Espírito Santo", "aumento":"0.25"},
+{"id":"28", "name":"Extrema", "aumento":"-0.05"},
+{"id":"29", "name":"Farrapos", "aumento":"0.25"},
+{"id":"30", "name":"Farroupilha", "aumento":"0.25"},
+{"id":"31", "name":"Floresta", "aumento":"0.1"},
+{"id":"32", "name":"Glória", "aumento":"0.1"},
+{"id":"33", "name":"Guarujá", "aumento":"-0.05"},
+{"id":"34", "name":"Higienópolis", "aumento":"0.5"},
+{"id":"35", "name":"Hípica", "aumento":"-0.05"},
+{"id":"36", "name":"Humaitá", "aumento":"1"},
+{"id":"37", "name":"Independência", "aumento":"0.5"},
+{"id":"38", "name":"Ipanema", "aumento":"0.25"},
+{"id":"39", "name":"Jardim Botânico", "aumento":"0.5"},
+{"id":"40", "name":"Jardim Carvalho", "aumento":"1"},
+{"id":"41", "name":"Jardim do Salso", "aumento":"0.5"},
+{"id":"42", "name":"Jardim Europa", "aumento":"1"},
+{"id":"43", "name":"Jardim Floresta", "aumento":"0.25"},
+{"id":"44", "name":"Jardim Isabel", "aumento":"0.25"},
+{"id":"45", "name":"Jardim Itu", "aumento":"0.5"},
+{"id":"46", "name":"Jardim Leopoldina", "aumento":"-0.05"},
+{"id":"47", "name":"Jardim Lindóia", "aumento":"0.5"},
+{"id":"48", "name":"Jardim Sabará", "aumento":"0.25"},
+{"id":"49", "name":"Jardim São Pedro", "aumento":"0.25"},
+{"id":"50", "name":"Lageado", "aumento":"-0.05"},
+{"id":"51", "name":"Lami", "aumento":"-0.05"},
+{"id":"52", "name":"Lomba do Pinheiro", "aumento":"-0.05"},
+{"id":"53", "name":"Mário Quintana", "aumento":"-0.05"},
+{"id":"54", "name":"Medianeira", "aumento":"0.1"},
+{"id":"55", "name":"Menino Deus", "aumento":"0.5"},
+{"id":"56", "name":"Moinhos de Vento", "aumento":"0.5"},
+{"id":"57", "name":"Montserrat", "aumento":"0.5"},
+{"id":"58", "name":"Morro Santana", "aumento":"0.25"},
+{"id":"59", "name":"Navegantes", "aumento":"0.25"},
+{"id":"60", "name":"Nonoai", "aumento":"0.25"},
+{"id":"61", "name":"Parque Santa Fé", "aumento":"0.5"},
+{"id":"62", "name":"Partenon", "aumento":"0.25"},
+{"id":"63", "name":"Passo da Areia", "aumento":"0.5"},
+{"id":"64", "name":"Passo das Pedras", "aumento":"0.25"},
+{"id":"65", "name":"Pedra Redonda", "aumento":"0.5"},
+{"id":"66", "name":"Petrópolis", "aumento":"0.5"},
+{"id":"67", "name":"Pitanga", "aumento":"-0.05"},
+{"id":"68", "name":"Pitinga", "aumento":"-0.05"},
+{"id":"69", "name":"Ponta Grossa", "aumento":"-0.05"},
+{"id":"70", "name":"Praia de Belas", "aumento":"0.5"},
+{"id":"71", "name":"Restinga", "aumento":"-0.05"},
+{"id":"72", "name":"Rio Branco", "aumento":"0.5"},
+{"id":"73", "name":"Rubem Berta", "aumento":"-0.05"},
+{"id":"74", "name":"Santa Cecília", "aumento":"0.1"},
+{"id":"75", "name":"Santa Maria Goretti", "aumento":"0.25"},
+{"id":"76", "name":"Santa Rosa de Lima", "aumento":"0.25"},
+{"id":"77", "name":"Santa Tereza", "aumento":"0.25"},
+{"id":"78", "name":"Santana", "aumento":"0.1"},
+{"id":"79", "name":"Santo Antônio", "aumento":"0.5"},
+{"id":"80", "name":"São Caetano", "aumento":"-0.05"},
+{"id":"81", "name":"São Geraldo", "aumento":"0.25"},
+{"id":"82", "name":"São João", "aumento":"0.25"},
+{"id":"83", "name":"São Sebastião", "aumento":"0.1"},
+{"id":"84", "name":"Sarandi", "aumento":"0.25"},
+{"id":"85", "name":"Serraria", "aumento":"0.25"},
+{"id":"86", "name":"Sétimo Céu", "aumento":"0.25"},
+{"id":"87", "name":"Teresópolis", "aumento":"0.5"},
+{"id":"88", "name":"Três Figueiras", "aumento":"1"},
+{"id":"89", "name":"Tristeza", "aumento":"0.5"},
+{"id":"90", "name":"Vila Assunção", "aumento":"0.5"},
+{"id":"91", "name":"Vila Conceição", "aumento":"0.5"},
+{"id":"92", "name":"Vila Ipiranga", "aumento":"0.25"},
+{"id":"93", "name":"Vila Jardim", "aumento":"0.5"},
+{"id":"94", "name":"Vila João Pessoa", "aumento":"0.25"},
+{"id":"95", "name":"Vila Nova", "aumento":"0.25"},
+{"id":"96", "name":"Vila São José", "aumento":"0.1"}
+];
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Calculadora de IPTU</a>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">Descubra quanto o seu IPTU vai aumentar!*</h1>
+        </div>
+        <div class="col-md-8 col-lg-8 col-xl-7 mx-auto">
+            <form class="form-horizontal">
+                <!-- Select Basic -->
+                <div class="form-row">
+                  <label class="col-md-6 col-form-label col-form-label-lg" for="selectbasic">Bairro:</label>
+                  <div class="col-md-6">
+                    <select id="selectbasic" name="selectbasic" class="form-control">
+                      <option value="1">Option one</option>
+                      <option value="2">Option two</option>
+                    </select><br>
+                  </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-row">
+                  <label class="col-md-6 col-form-label col-form-label-lg" for="textinput">Valor Atual do IPTU: R$</label>  
+                  <div class="col-md-6">
+                  <input id="textinput" name="textinput" type="text" value="500" class="form-control input-md" required="">
+                  </div>
+                </div>
+                <!-- Button -->
+                <div class="form-row">
+                  <label class="col-md-6 control-label" for="singlebutton"></label>
+                  <div class="col-md-6">
+                    <button id="singlebutton" name="singlebutton" class="btn btn-success">Calcular</button>
+                  </div><br><br>
+                </div>
+                <div class="form-row">
+                    <label class="col-md-6 control-label" for="singlebutton"></label>
+                    <div class="col-md-6">
+                        <span id="resultado" class="col-form-label col-form-label-lg">&nbsp;<br>&nbsp;</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card col-md-2 col-lg-2 col-xl-2 mx-auto">
+            <div class='card-body'>
+                <h5 class="card-title text-muted">Mais Detalhes?</h5>
+               <span class="card-text text-muted">Para maiores informações, visite o <a href="https://public.tableau.com/profile/wvcode#!/vizhome/ProjeodoValorIPTUPortoAlegre2020/IPTU">nosso mapa</a>!</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+                * Os valores mostrados aqui são projeções.
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&nbsp;</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+                Site produzido por Walter R. Paixão-Côrtes e Paulo A. Caliendo.
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0"><span class="copy-left">&copy;</span>Calculadora de IPTU 2020.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+        $(document).ready(function(){
+            var $select = $('#selectbasic');                        
+            $select.find('option').remove();                          
+            $.each(dados, function(i, p) {           
+                $('<option>').val(i).text(p.name).appendTo($select);     
+            });
+
+            $("#singlebutton").click(function(){
+                var key = $('#selectbasic').val();
+                var aumento = dados[key].aumento;
+                var curr = $('#textinput').val();
+                var new_iptu = Math.round(parseFloat(curr) * (1 + parseFloat(aumento)));
+                $('#resultado').html("Percentual de Aumento: " + Math.round(parseFloat(aumento)*100) + "%<br>O Valor do IPTU 2020 é: R$" + new_iptu.toString() + "*");
+                return false;
+            }); 
+        });  
+  </script>
+
+</body>
+
+</html>
